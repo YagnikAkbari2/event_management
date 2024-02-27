@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.showcase {
+}
+
+.salutation span {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: rgb(60, 75, 141);
+  font-size: 32px;
+  margin: 0 20px;
+}
+
+.two_input {
+  display: flex;
+  gap: 21px;
+}
+
+.two_input .input_box input[type="text"] {
+  width: 220px !important;
+}
+
+.input_box {
+  position: relative;
+}
+
+.input_box input[type="text"],
+.input_box select {
+  background: transparent;
+  border: 2px solid white;
+  width: 461px;
+  height: 48px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 12px;
+  color: white;
+}
+
+.input_box option {
+  background-color: rgb(81, 104, 198);
+}
+
+.input_box input[type="text"]:focus,
+.input_box input[type="text"]:active,
+.input_box select:focus,
+.input_box select:active {
+  outline: none;
+}
+
+.input_box span {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 2;
+  margin-top: -12px;
+  font-weight: 600;
+  color: white;
+  padding: 0 5px;
+  background-color: rgb(81, 104, 198);
+}
+
+.primary_back {
+  background-color: rgb(81, 104, 198);
+  border-radius: 40px 0 0 40px;
+}
+
+.primary_button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: rgb(60, 75, 141);
+  padding: 12px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+}
+
+.signup_button {
+  width: 461px;
+}
+
+.link span {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.link a {
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 8px;
+  letter-spacing: 0.35px;
+}
