@@ -7,9 +7,9 @@ const EventCard = () => {
       <div className={styles["event-card__parent-image"]}>
         <span className={styles["event-card__tag"]}>earning</span>
         <img
-          src={`${process.env.PUBLIC_URL}/images/test.jpg`}
+          src={`${process.env.PUBLIC_URL}/images/Test.png`}
           alt="Event..."
-          className="event-card__image"
+          className={styles["event-card__image"]}
         />
       </div>
       <h2 className={styles["event-card__heading"]}>

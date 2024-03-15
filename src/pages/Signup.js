@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/pages/SignUp.module.css";
+import { useDispatch } from "react-redux";
+import { userSignup } from "../redux/actions/signupAction";
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+  const [userData, setUserData] = useState({});
+  console.log(userData);
+  const handleUserSignup = (e) => {
+    e.preventDefault();
+    dispatch(userSignup(userData));
+  };
   return (
     <div className="flex" style={{ height: "100vh" }}>
       <div
@@ -27,41 +36,101 @@ const SignUp = () => {
         <div className={`${styles.form}`}>
           <p className={`text-center ${styles.logo}`}>Peer2Venue</p>
           <h1 className="text-white text-center mb-5">Sign Up to Peer2Venue</h1>
-          <form>
+          <form onSubmit={handleUserSignup} method="post">
             <div className="container">
               <div className={`${styles.two_input} `}>
                 <div className={`${styles.input_box}`}>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    onChange={(e) =>
+                      setUserData({
+                        ...userData,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
+                  />
                   <span>First Name</span>
                 </div>
                 <div className={`${styles.input_box}`}>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    onChange={(e) =>
+                      setUserData({
+                        ...userData,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
+                  />
                   <span>Last Name</span>
                 </div>
               </div>
               <div className={`${styles.input_box}`}>
-                <input type="text" />
+                <input
+                  type="text"
+                  name="phoneno"
+                  onChange={(e) =>
+                    setUserData({
+                      ...userData,
+                    })
+                  }
+                />
                 <span>Phone Number</span>
               </div>
               <div className={`${styles.input_box}`}>
-                <input type="text" />
+                <input
+                  type="text"
+                  name="organisation"
+                  onChange={(e) =>
+                    setUserData({
+                      ...userData,
+                      [e.target.name]: e.target.value,
+                    })
+                  }
+                />
                 <span>Organization</span>
               </div>
               <div className={`${styles.input_box}`}>
-                <span for="cars">Role</span>
-                <select id="cars">
-                  <option value="volvo">Admin</option>
-                  <option value="saab">User</option>
-                  <option value="opel">Owner</option>
-                  <option value="audi">Shopkeeper</option>
+                <span for="role">Role</span>
+                <select
+                  id="role"
+                  name="role"
+                  onChange={(e) =>
+                    setUserData({
+                      ...userData,
+                      [e.target.name]: e.target.value,
+                    })
+                  }
+                >
+                  <option disabled selected></option>
+                  <option value="USER">User</option>
                 </select>
               </div>
               <div className={`${styles.input_box}`}>
-                <input type="text" />
+                <input
+                  type="text"
+                  name="email"
+                  onChange={(e) =>
+                    setUserData({
+                      ...userData,
+                      [e.target.name]: e.target.value,
+                    })
+                  }
+                />
                 <span>Email address</span>
               </div>
               <div className={`${styles.input_box}`}>
-                <input type="text" />
+                <input
+                  type="text"
+                  name="password"
+                  onChange={(e) =>
+                    setUserData({
+                      ...userData,
+                      [e.target.name]: e.target.value,
+                    })
+                  }
+                />
                 <span>Password</span>
               </div>
               <div>

@@ -16,7 +16,8 @@
   margin: auto;
   padding-bottom: 1.35rem;
   height: 250px;
-  background-color: blue;
+  border-radius: 11.6px;
+  overflow: hidden;
 }
 
 .event-card__tag {
