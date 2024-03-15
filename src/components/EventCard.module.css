@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.event-card {
+  background-color: rgb(236, 236, 236);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 1.35rem;
+  width: 400px;
+}
+
+.event-card__parent-image {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 1.35rem;
+  height: 450px;
+}
+
+.event-card__tag {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  text-transform: uppercase;
+  color: rgb(120, 72, 244);
+  border-radius: 5px;
+  letter-spacing: 0.85px;
+  font-size: 14px;
+  padding: 5px 8px;
+  background-color: rgb(236, 236, 236);
+}
+
+.event-card__image {
+  width: 100%;
+  border-radius: 10px;
+  background-repeat: repeat;
+}
+
+.event-card__heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(23, 23, 23);
+}
+
+.event-card__timing {
+  color: rgb(120, 72, 244);
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.event-card__brief {
+  color: rgb(126, 126, 126);
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
