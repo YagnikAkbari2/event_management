@@ -1,58 +1,43 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+import styles from "./Dropdown.module.css";
 
-const Dropdown = ({ dOptions }) => {
+const CDropdown = ({
+  dOptions,
+  onChange,
+  width = "w-[250px]",
+  label,
+  labelClassName,
+}) => {
+  const defaultOption = dOptions && dOptions.length && dOptions[0];
   return (
-    <>
-      <button
-        id="dropdownDefaultButton"
-        data-dropdown-toggle="dropdown"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        type="button"
-      >
-        Dropdown button
-        <svg
-          class="w-2.5 h-2.5 ms-3"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 10 6"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m1 1 4 4 4-4"
+    <div>
+      {dOptions && label && (
+        <p className={`${labelClassName ? labelClassName : "text-white pb-3"}`}>
+          {label}
+        </p>
+      )}
+      {dOptions && dOptions.length ? (
+        <div className={`${styles.dropdown} flex ${width}`}>
+          <Dropdown
+            options={dOptions}
+            onChange={onChange}
+            value={defaultOption}
+            placeholder="Select an option"
+            className={`${styles.dropdownw} ${width}`}
           />
-        </svg>
-      </button>
-      <div
-        id="dropdown"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-      >
-        <ul
-          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="dropdownDefaultButton"
-        >
-          {dOptions &&
-            dOptions.length &&
-            dOptions.map((opt) => {
-              return (
-                <li>
-                  <Link
-                    to="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Test
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
-      </div>
-    </>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/down_arrow.svg`}
+            alt="down arrow"
+            className=""
+          />
+        </div>
+      ) : (
+        []
+      )}
+    </div>
   );
 };
 
-export default Dropdown;
+export default CDropdown;

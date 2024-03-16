@@ -1,0 +1,11 @@
+.dropdown {
+  position: relative;
+  font-family: "Playfair Display", serif;
+}
+
+.dropdown img {
+  position: absolute;
+  left: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+}

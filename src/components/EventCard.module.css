@@ -40,13 +40,14 @@
 
 .event-card__heading {
   font-size: 1rem;
+  margin-top: 1rem;
   font-weight: 600;
   color: rgb(23, 23, 23);
 }
 
 .event-card__timing {
   color: rgb(120, 72, 244);
-  margin-top: 1.5rem;
+  margin-top: 0.95rem;
   font-size: 0.85rem;
 }
 
