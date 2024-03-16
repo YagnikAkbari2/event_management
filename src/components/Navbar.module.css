@@ -1,0 +1,10 @@
+.logo {
+  color: rgb(236, 236, 236);
+  -webkit-text-fill-color: rgb(236, 236, 236);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(120, 72, 244);
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}

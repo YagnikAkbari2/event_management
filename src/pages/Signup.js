@@ -137,7 +137,7 @@ const SignUp = () => {
                 <input
                   type="submit"
                   value="Sign Up"
-                  className={`${styles.primary_button} ${styles.signup_button}`}
+                  className={`primary_button ${styles.signup_button}`}
                 />
               </div>
             </div>
