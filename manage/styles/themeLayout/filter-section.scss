@@ -1,0 +1,26 @@
+.filter-section{
+    .filterBox{
+        &.filterBox-calender{
+
+        }
+    }
+}
+
+@media (max-width: 1366px){
+    .filter-section{
+        .filterBox{
+            &.filterBox-calender{
+                label{
+                    font-size: 12px;
+                    margin-top: 0.1rem !important;
+                    margin-bottom: 0.1rem !important;
+                    img{
+                        width: 20px;
+                        height: 18px;
+                        padding-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }   
+}
