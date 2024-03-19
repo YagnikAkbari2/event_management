@@ -1,0 +1,28 @@
+.wrapper{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F7FAFC;
+    .card{
+        border-radius: 3px;
+       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+       min-width: 400px;
+    }
+    .cardheading{
+        color: #5757A3;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        margin: 15px 0px 0px 8px;
+        width: 83px;
+        height: 20px;
+    }
+    .title{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        height: 24px;
+    }
+}

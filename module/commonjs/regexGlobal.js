@@ -1,0 +1,19 @@
+export const IFSC_REGEX = /[A-Z]{4}0[A-Z0-9]{6}$/;
+export const mobileNumber_Regex = /^\+?[6-9][0-9]{9}$/;
+export const email_Regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+export const price_Regex = /^-?\d+\.?\d{0,2}$/;
+export const batchNumber_Regex = /^[a-zA-Z0-9]*$/;
+export const integerWithDecimal_Regex = /^[0-9][0-9]*[.]?[0-9]{0,2}$/;
+export const refNo_Regex = /^[a-zA-Z0-9]*$/;
+export const gstNumber_Regex =
+  /\d{2}[A-Z]{5}\d{4}[A-Z]{1}[A-Z1-9]{1}[Z]{1}[A-Z\d]{1}/;
+export const expiryDate_Regex = /^((0?[1-9]|1[0-2]))(\-|\/)\d{2}$/;
+export const GRN_Calculation_Regex = /^[A-Z0-9]*$/;
+export const onlyInteger_Regex = /^[0-9]*$/;
+export const latitude_Regex = /-?([0-8]?[0-9]|90)(\.[0-9]{4,10})/;
+export const longitude_Regex = /^-?([0-9]{1,2}|1[0-7][0-9]|180)(\.[0-9]{4,10})/;
+export const print_priority_Regex = /^(?!-1+)\d{1,4}$/;
+export const expiryDate_fourDigit = /^((0?[1-9]|1[0-2]))\d{2}$/;
+export const expiryDate_validation = /^((0?[1-9]|1[0-2]))(\-|\/)\d{2}$/;
+export const expiryDate_secondValidation = /^((1?\/))[0-2]{1}\d{2}$/;
+export const password_regex = /^\s*([0-9a-zA-Z]*)\s*$/;
